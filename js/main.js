@@ -14,7 +14,7 @@ let randomNumGen = () => {
     let randomNum1 = Math.floor(Math.random() * 7);
     let randomNum2 = Math.floor(Math.random() * 7);
     let randomNum3 = Math.floor(Math.random() * 7);
-    renderSlots(randomNum1, randomNum2, randomNum3)
+    renderSlots(randomNum1, randomNum2, randomNum3);
 };
 
 buttonEl.addEventListener('click', handleButton);
@@ -39,7 +39,7 @@ let resetBtn = () => {
 }
 
 let emojis = ['👻',
-"🍒", "❌", "💰", "💎", "❼", "⭐️"]
+"🍒", "❌", "💰", "💎", "❼", "⭐️"];
 
 let renderSlots = (randomNum1, randomNum2, randomNum3) => {
     first.textContent = emojis[randomNum1]
@@ -66,13 +66,13 @@ function renderButton() {
     if(boardState === 0) { 
         const buttonChild = document.createElement('button');
         buttonChild.innerHTML = 'PLAY'
-        buttonChild.setAttribute('id', 'play')
-        buttonEl.appendChild(buttonChild)
+        buttonChild.setAttribute('id', 'play');
+        buttonEl.appendChild(buttonChild);
     } else {
         const buttonChild = document.createElement('button');
         buttonChild.innerHTML = 'RESET'
-        buttonChild.setAttribute('id', 'reset')
-        buttonEl.appendChild(buttonChild)
+        buttonChild.setAttribute('id', 'reset');
+        buttonEl.appendChild(buttonChild);
     }
 }
 
