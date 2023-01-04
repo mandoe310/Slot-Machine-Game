@@ -9,7 +9,6 @@ const third = document.getElementById('third');
 
 
 let randomNumGen = () => {
-    console.log("click")
     boardState = 1;
     renderButton();
     let randomNum1 = Math.floor(Math.random() * 7);
