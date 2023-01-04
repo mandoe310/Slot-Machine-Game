@@ -1,6 +1,4 @@
 let boardState = 0;
-// if board state equals zero its the beginning of the game and the player should be able to press the play button
-// if board state equals one its the end of the game and the player should be able to press the reset button
 const h2El = document.querySelector('h2');
 const machineEl = document.getElementById('machine');
 const buttonEl = document.getElementById('buttons');
@@ -17,7 +15,6 @@ let randomNumGen = () => {
     let randomNum1 = Math.floor(Math.random() * 7);
     let randomNum2 = Math.floor(Math.random() * 7);
     let randomNum3 = Math.floor(Math.random() * 7);
-    // console.log(emojis[randomNum1])
     renderSlots(randomNum1, randomNum2, randomNum3)
 };
 
@@ -41,8 +38,6 @@ let resetBtn = () => {
     second.textContent = '❔'
     third.textContent = '❔'
 }
-
-// reset.addEventListener('click', resetBtn);
 
 let emojis = ['👻',
 "🍒", "❌", "💰", "💎", "❼", "⭐️"]
@@ -69,12 +64,12 @@ function renderMessage(randomNum1, randomNum2, randomNum3) {
 
 function renderButton() {
     if(buttonEl.children[0])buttonEl.removeChild(buttonEl.children[0])
-    if(boardState === 0) { // show play button remove reset button
+    if(boardState === 0) { 
         const buttonChild = document.createElement('button');
         buttonChild.innerHTML = 'PLAY'
         buttonChild.setAttribute('id', 'play')
         buttonEl.appendChild(buttonChild)
-    } else { // show reset remove play button
+    } else {
         const buttonChild = document.createElement('button');
         buttonChild.innerHTML = 'RESET'
         buttonChild.setAttribute('id', 'reset')
