@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="game">
     <h1>GA's Lucky Slots</h1>
     <p>Hello World!</p>
     <h2></h2>
+    <div id="userName"></div>
     <div id="machine">
         <div id="first">❔
         </div>
@@ -22,6 +24,16 @@
     <div id="buttons">
     </div>
     <h3>Welcome to General Assembly SEI!</h3>
+    <form class="splash screen">
+        <h1 id="title">GA's LUCKY SLOTS</h1>
+        <h2 class="welcome">Welcome!</h2>
+        <div id="info">
+          <div id="error"></div>
+          <input id="name" type="text" placeholder="Name/Username" required />
+        </div>
+        <button id="submit" type="submit">Enter</button>
+      </form>
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>

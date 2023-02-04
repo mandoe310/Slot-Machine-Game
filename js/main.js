@@ -7,6 +7,23 @@ const first = document.getElementById('first');
 const second = document.getElementById('second');
 const third = document.getElementById('third');
 
+const submitBtn = document.getElementById("submit")
+const playerName = document.getElementById("name")
+const user = document.getElementById("userName")
+
+submitBtn.addEventListener("click", function (evt) {
+    var name = playerName.value
+    if (name.length > 15) {
+        evt.preventDefault()
+        const error = document.getElementById("error")
+        error.classList.add("error")
+        error.innerHTML = "Name must be less than 15 characters"
+    } else if (name !== "") {
+        evt.preventDefault()
+        document.querySelector("form").style.zIndex = "-4"
+        user.innerHTML = name
+    }
+})
 
 let randomNumGen = () => {
     boardState = 1;
